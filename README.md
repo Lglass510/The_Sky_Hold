@@ -1,4 +1,18 @@
-# Azure Lab
+# The Sky Hold
+
+> **The high keep where The Realm's cloud infrastructure takes shape.**
+
+The Sky Hold is The Realm's Azure repository. It documents cloud identity, governance, networking, compute, storage, and monitoring while translating the lessons of the on-premises lab into repeatable Azure administration.
+
+Its purpose is to build understanding first and automation second: learn the resource relationships through the Portal, Azure CLI, and PowerShell, then make the environment reproducible with Bicep and other infrastructure-as-code practices.
+
+## Evolution
+
+The Sky Hold will evolve from exam-focused lab sections into an integrated Azure environment with explicit dependencies, least-privilege access, secured network paths, observable workloads, and repeatable deployments. Each area should eventually connect to the others rather than remain an isolated exercise.
+
+---
+
+## Azure Lab
 
 > **Build it. Break it. Secure it. Understand it.**
 
