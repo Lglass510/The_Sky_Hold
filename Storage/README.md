@@ -12,7 +12,7 @@ The Sky Hold currently contains three StorageV2 accounts in the `az104-storage` 
 
 [`Secure-StorageAccounts.ps1`](Secure-StorageAccounts.ps1) applies the storage security baseline to those existing accounts.
 
-The reusable review copy is also kept in [The Forge](../../The%20Forge/Scripts/storage_account_scripts), while this repository records the Azure scope, resource assumptions, and operational safety notes.
+The reusable review copy is also kept in [The Forge](https://github.com/Lglass510/The_Forge/blob/main/Scripts/storage_account_scripts), while this repository records the Azure scope, resource assumptions, and operational safety notes.
 
 The default baseline:
 
