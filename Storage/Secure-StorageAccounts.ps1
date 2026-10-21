@@ -1,6 +1,6 @@
 #Requires -Modules Az.Accounts, Az.Storage
 
-<#!
+<#
 .SYNOPSIS
     Applies a baseline security configuration to existing Azure Storage accounts.
 
