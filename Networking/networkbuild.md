@@ -72,7 +72,7 @@ Collapsing the two-step "create, then add a subnet" pattern into a single call i
 
 ## Attempt 3 — Adding a Subnet to an Existing VNet, For Real This Time
 
-This closes the first TODO above, and it exists because of a Compute-lab need: Azure Bastion (see `Compute/`) requires its own subnet, in the same VNet as the VM it protects, named **exactly** `AzureBastionSubnet` and sized at least `/26`. `mavnetwork` already had `10.0.0.0/24` sitting unused — reserved back in Attempt 2 for exactly this kind of future need — so I carved `10.0.0.0/26` (64 addresses) out of it.
+This closes the first TODO above, and it exists because of a Compute-lab need: Azure Bastion (for the planned Compute lab) requires its own subnet, in the same VNet as the VM it protects, named **exactly** `AzureBastionSubnet` and sized at least `/26`. `mavnetwork` already had `10.0.0.0/24` sitting unused — reserved back in Attempt 2 for exactly this kind of future need — so I carved `10.0.0.0/26` (64 addresses) out of it.
 
 [Add-Subnet.ps1](Add-Subnet.ps1) does what Attempt 1 of `VNET.ps1` *should* have done: it captures the return value of `Add-AzVirtualNetworkSubnetConfig` instead of relying on it mutating `$virtualNetwork` as a side effect.
 
@@ -178,4 +178,4 @@ The sharp edge: `-SecurityRules $rdpFromBastion` declares the *complete* rule li
 - [x] Write the companion script for adding a subnet to an existing VNet, using the corrected (return-value-captured) version of the Attempt 1 pattern. — [Add-Subnet.ps1](Add-Subnet.ps1)
 - [x] Add an NSG to `mars1` and document that decision here too. — [NSG-mars1.ps1](NSG-mars1.ps1)
 - [ ] Screenshot the resulting VNet/subnet/NSG from the Azure Portal to confirm CLI output matches what actually deployed.
-- [ ] Continue into `Compute/` — Azure Bastion host and a Windows Server VM landing in `mars1`, reachable only through Bastion.
+- [ ] Next, the Compute lab (planned, no folder yet): Azure Bastion host and a Windows Server VM landing in `mars1`, reachable only through Bastion.

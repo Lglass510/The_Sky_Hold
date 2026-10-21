@@ -14,11 +14,23 @@ The Sky Hold will evolve from exam-focused lab sections into an integrated Azure
 
 ---
 
+## What's built so far
+
+| Area | Status | Evidence |
+| --- | --- | --- |
+| Networking | Done | [VNet and subnet build](./Networking/networkbuild.md): `mavnetwork` VNet (`10.0.0.0/16`), `mars1` subnet, NSG, with [VNET.ps1](./Networking/VNET.ps1), [Add-Subnet.ps1](./Networking/Add-Subnet.ps1), [NSG-mars1.ps1](./Networking/NSG-mars1.ps1) |
+| Storage | Done | [Storage hardening](./Storage/README.md) with [Secure-StorageAccounts.ps1](./Storage/Secure-StorageAccounts.ps1), built with Azure CLI and Az PowerShell |
+| Identity & Governance | Planned | Entra ID and Sentinel identity work lives in [The Ward](https://github.com/Lglass510/The_Ward_Sentinel_Soar) |
+| Compute | Planned | |
+| Monitoring | Planned | Log Analytics and Sentinel work lives in [The Ward](https://github.com/Lglass510/The_Ward_Sentinel_Soar) and [The Ascent](https://github.com/Lglass510/The_Ascent_Bicep_Sentinel) |
+
+---
+
 ## Azure Lab
 
 > **Build it. Break it. Secure it. Understand it.**
 
-This lab is my hands-on Azure environment for preparing for the **Microsoft Certified: Azure Administrator Associate (AZ-104)** and **Microsoft Certified: Identity and Access Administrator Associate (SC-500)** exams.
+This lab is my hands-on Azure environment for preparing for the **Microsoft Certified: Azure Administrator Associate (AZ-104)** and **Microsoft Certified: Identity and Access Administrator Associate (SC-300)** exams.
 
 The goal isn't to memorize which button to click in the Azure Portal.
 
@@ -80,31 +92,20 @@ The objective is to eventually have these components interact rather than existi
 # Repository Structure
 
 ```text
-Azure_Lab/
-│
-├── Identity-Governance/
-│   └── Identity, RBAC, Azure Policy, governance
-│
-├── Storage/
-│   └── Storage accounts, blobs, files, redundancy, security
-│
-├── Compute/
-│   └── Virtual machines and Azure compute services
-│
-├── Networking/
-│   └── VNets, subnets, NSGs, DNS, connectivity
-│
-├── Monitoring/
-│   └── Azure Monitor, Log Analytics, alerts, diagnostics
-│
+The_Sky_Hold/
+├── Networking/      VNet, subnet and NSG scripts plus the build write-up
+├── Storage/         Storage account hardening script and write-up
+├── screenshots/     Evidence for both
+├── Azure_Portal/    AZ-104 study-agent instructions
 └── README.md
 ```
 
-Each directory will contain the labs, notes, commands, configurations, and lessons learned associated with that area.
+Identity & Governance, Compute and Monitoring get their own folders when there is work to show.
+
 
 ---
 
-# 01 — Identity & Governance
+# 01 — Identity & Governance (planned)
 
 **Question: Who are you, and what are you allowed to do?**
 
@@ -133,7 +134,7 @@ and
 
 > **Authorization — "What are you allowed to do?"**
 
-This area is especially important for **SC-500**, but it also forms the foundation for administering Azure effectively.
+This area is especially important for **SC-300**, but it also forms the foundation for administering Azure effectively.
 
 ---
 
@@ -164,7 +165,7 @@ It's to understand **why one storage configuration would be appropriate over ano
 
 ---
 
-# 03 — Compute
+# 03 — Compute (planned)
 
 **Question: Where does the workload run?**
 
@@ -241,7 +242,7 @@ If something doesn't work, I want to be able to reason through the path instead 
 
 ---
 
-# 05 — Monitoring
+# 05 — Monitoring (planned)
 
 **Question: How do I know what's happening?**
 
@@ -288,7 +289,7 @@ Monitoring provides visibility.
 
 Governance controls what can be deployed and how.
 
-So instead of treating SC-500 as a completely separate subject, I'm using this lab to understand how **security and administration overlap.**
+So instead of treating SC-300 as a completely separate subject, I'm using this lab to understand how **security and administration overlap.**
 
 ```text
                  SECURITY
@@ -380,7 +381,7 @@ The lab will reinforce the major administrator skill areas:
 * Configure and manage virtual networking
 * Monitor and maintain Azure resources
 
-## SC-500 — Identity and Access Administrator
+## SC-300 — Identity and Access Administrator
 
 The lab will reinforce areas including:
 
@@ -452,6 +453,6 @@ and eventually:
 "I can build, secure, troubleshoot, and reproduce it."
 ```
 
-**AZ-104 and SC-500 are the milestones.**
+**AZ-104 and SC-300 are the milestones.**
 
 **The real objective is becoming a capable Azure administrator who understands the infrastructure underneath the certification questions.**
