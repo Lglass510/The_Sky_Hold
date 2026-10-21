@@ -20,7 +20,7 @@ The Sky Hold will evolve from exam-focused lab sections into an integrated Azure
 | --- | --- | --- |
 | Networking | Done | [VNet and subnet build](./Networking/networkbuild.md): `mavnetwork` VNet (`10.0.0.0/16`), `mars1` subnet, NSG, with [VNET.ps1](./Networking/VNET.ps1), [Add-Subnet.ps1](./Networking/Add-Subnet.ps1), [NSG-mars1.ps1](./Networking/NSG-mars1.ps1) |
 | Storage | Done | [Storage hardening](./Storage/README.md) with [Secure-StorageAccounts.ps1](./Storage/Secure-StorageAccounts.ps1), built with Azure CLI and Az PowerShell |
-| Identity & Governance | Planned | Entra ID and Sentinel identity work lives in [The Ward](https://github.com/Lglass510/The_Ward_Sentinel_Soar) |
+| Identity & Governance | Started | [Entra ID bulk user creation](./Identity/entra-bulk-user-creation.md): 51 users, 7 departments, failed first upload diagnosed (successful retry not yet screenshotted). Sentinel identity work lives in [The Ward](https://github.com/Lglass510/The_Ward_Sentinel_Soar) |
 | Compute | Planned | |
 | Monitoring | Planned | Log Analytics and Sentinel work lives in [The Ward](https://github.com/Lglass510/The_Ward_Sentinel_Soar) and [The Ascent](https://github.com/Lglass510/The_Ascent_Bicep_Sentinel) |
 
@@ -93,6 +93,7 @@ The objective is to eventually have these components interact rather than existi
 
 ```text
 The_Sky_Hold/
+├── Identity/        Entra ID bulk user creation
 ├── Networking/      VNet, subnet and NSG scripts plus the build write-up
 ├── Storage/         Storage account hardening script and write-up
 ├── screenshots/     Evidence for both
@@ -100,12 +101,12 @@ The_Sky_Hold/
 └── README.md
 ```
 
-Identity & Governance, Compute and Monitoring get their own folders when there is work to show.
+Compute and Monitoring get their own folders when there is work to show.
 
 
 ---
 
-# 01 — Identity & Governance (planned)
+# 01 — Identity & Governance (started)
 
 **Question: Who are you, and what are you allowed to do?**
 
